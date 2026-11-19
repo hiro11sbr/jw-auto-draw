@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+<title>ウォークインホーム対応｜JW AUTO DRAW</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%230b0d11%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2243%22%20font-size%3D%2228%22%20font-family%3D%22Arial%2CHelvetica%2Csans-serif%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f2f2f2%22%20letter-spacing%3D%221%22%3EJW%3C/text%3E%3Crect%20x%3D%2210%22%20y%3D%2250%22%20width%3D%2244%22%20height%3D%222%22%20fill%3D%22%23f2f2f2%22/%3E%3C/svg%3E">
+<style>
+:root { --sans:"IBM Plex Sans JP","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif; --mono:"IBM Plex Mono","IBM Plex Sans JP","Yu Gothic UI",Consolas,monospace;  --paper:#f5f3ee; --ink:#15181b; --mu:#6a6e72; --ln:#cfcbc2; --blue:#2457f5; --dark:#0b0d11; }
+* { box-sizing:border-box; margin:0; }
+html { background:var(--paper); }
+body { background:var(--paper); color:var(--ink); font:16px/1.9 var(--sans); }
+.wrap { max-width:1080px; margin:0 auto; padding:0 32px; }
+header { background:var(--dark); color:#fff; }
+header .wrap { display:flex; justify-content:space-between; align-items:center; height:64px; }
+header a { color:#cfd3d8; text-decoration:none; font-size:14px; letter-spacing:.14em; }
+header a:hover { color:#fff; }
+header .logo { color:#fff; font-weight:300; letter-spacing:.2em; font-size:15px; }
+.top { background:var(--dark); color:#fff; padding:56px 0 64px; }
+.top .sub { color:#7c9bff; }
+.top h1 { font-size:clamp(28px,4vw,46px); font-weight:800; line-height:1.4; margin-top:10px; letter-spacing:.02em; }
+.top p { margin-top:18px; color:#c3c8cf; max-width:42em; }
+.sub { font-size:14px; font-weight:700; letter-spacing:.28em; color:var(--blue); }
+section { padding-top:80px; }
+h2 { font-size:30px; font-weight:800; line-height:1.5; margin-top:6px; }
+.lead { margin-top:14px; color:#3d4248; max-width:46em; }
+.rows { margin-top:28px; border-top:1px solid var(--ink); }
+.rows > div { display:grid; grid-template-columns:180px 1fr; gap:28px; padding:16px 0; border-bottom:1px solid var(--ln); align-items:baseline; }
+.rows em { font-style:normal; font-weight:700; font-size:14px; letter-spacing:.08em; }
+.rows p + p { margin-top:6px; }
+.rows small { display:block; color:var(--mu); font-size:13px; line-height:1.7; margin-top:4px; }
+.tags + small { margin-top:8px; }
+.tags { display:flex; flex-wrap:wrap; gap:8px; }
+.tags span { border:1px solid var(--ink); padding:0 10px; font-size:13.5px; line-height:1.9; }
+table { width:100%; border-collapse:collapse; margin-top:28px; border-top:1px solid var(--ink); font-size:15px; }
+th, td { text-align:left; padding:12px 0; border-bottom:1px solid var(--ln); vertical-align:baseline; }
+th { font-weight:700; width:180px; padding-right:28px; font-size:14px; }
+td.num { font-variant-numeric:tabular-nums; width:120px; }
+.note { margin-top:14px; color:var(--mu); font-size:13px; }
+.pair { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; column-gap:40px; margin-top:32px; }
+.pair figure { justify-self:center; }
+.pair img { display:block; height:min(460px,56vh); width:auto; border:1px solid var(--ln); }
+.pair .out img { border-color:#2a2f36; }
+.pair figcaption { margin-top:10px; font-size:12.5px; color:var(--mu); letter-spacing:.06em; }
+.pair .ar { margin-bottom:26px; }
+.warn > div em { color:#b3261e; }
+footer { margin-top:110px; border-top:1px solid var(--ink); padding:28px 0 56px; color:var(--mu); font-size:13px; letter-spacing:.16em; }
+footer a { color:var(--ink); }
+@media (max-width:760px){
+  .rows > div { grid-template-columns:1fr; gap:4px; }
+  th { width:auto; display:block; padding-bottom:0; border-bottom:0; } td { display:block; } td.num { width:auto; }
+  .pair { column-gap:12px; } .pair .ar { width:40px; } .pair img { height:auto; width:100%; } .pair figure { min-width:0; }
+}
+.sub, .eyebrow, .how4 .n, .steps .n, figcaption, .sc span, .cads em, td.num, .adtag { font-family:var(--mono); }
+.how4 .n { font-weight:500; }
+body { font-weight:300; }
+b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700; }
+
+.logo .logosvg { display:block; width:210px; height:auto; }
+.logo .logosvg g:first-of-type * { stroke-width:3.4px; }   /* 補助線は、縮小しても消えない細さに */
+</style>
+<script>try{ if("scrollRestoration" in history) history.scrollRestoration="manual"; }catch(e){} window.addEventListener("load",function(){ if(!location.hash) window.scrollTo(0,0); });</script>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="index.html" aria-label="JW AUTO DRAW"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-391.1 -168.0 1469.8 436.0" class="logosvg" role="img" aria-label="JW AUTO DRAW"><g fill="none" stroke="#f2f2f2" stroke-linecap="butt"><line x1="-4.83" y1="118.24" x2="45.54" y2="-20.83" stroke-width="0.7" opacity="0.8"/><line x1="32.00" y1="-16.57" x2="84.07" y2="127.18" stroke-width="0.7" opacity="0.8"/><line x1="-11.35" y1="66.00" x2="72.78" y2="66.00" stroke-width="0.7" opacity="0.8"/><line x1="110.90" y1="-13.24" x2="110.90" y2="101.67" stroke-width="0.7" opacity="0.8"/><line x1="167.10" y1="-19.64" x2="167.10" y2="85.99" stroke-width="0.7" opacity="0.8"/><circle cx="139.00" cy="71.90" r="28.1" stroke-width="0.7" opacity="0.64"/><line x1="131.00" y1="71.90" x2="147.00" y2="71.90" stroke-width="0.7" opacity="1.0"/><line x1="139.00" y1="63.90" x2="139.00" y2="79.90" stroke-width="0.7" opacity="1.0"/><line x1="160.11" y1="0.00" x2="280.23" y2="0.00" stroke-width="0.7" opacity="0.8"/><line x1="227.00" y1="-29.75" x2="227.00" y2="125.29" stroke-width="0.7" opacity="0.8"/><ellipse cx="330.90" cy="50.00" rx="52.00" ry="56.00" stroke-width="0.7" opacity="0.64"/><line x1="322.90" y1="50.00" x2="338.90" y2="50.00" stroke-width="0.7" opacity="1.0"/><line x1="330.90" y1="42.00" x2="330.90" y2="58.00" stroke-width="0.7" opacity="1.0"/><line x1="508.42" y1="0.00" x2="458.78" y2="0.00" stroke-width="0.7" opacity="0.8"/><line x1="470.70" y1="-24.51" x2="470.70" y2="130.57" stroke-width="0.7" opacity="0.8"/><line x1="449.10" y1="100.00" x2="511.07" y2="100.00" stroke-width="0.7" opacity="0.8"/><circle cx="483.80" cy="50.00" r="50" stroke-width="0.7" opacity="0.64"/><line x1="475.80" y1="50.00" x2="491.80" y2="50.00" stroke-width="0.7" opacity="1.0"/><line x1="483.80" y1="42.00" x2="483.80" y2="58.00" stroke-width="0.7" opacity="1.0"/><line x1="636.16" y1="0.00" x2="573.94" y2="0.00" stroke-width="0.7" opacity="0.8"/><line x1="583.60" y1="-27.71" x2="583.60" y2="128.27" stroke-width="0.7" opacity="0.8"/><line x1="567.77" y1="50.00" x2="619.51" y2="50.00" stroke-width="0.7" opacity="0.8"/><circle cx="610.70" cy="25.00" r="25" stroke-width="0.7" opacity="0.64"/><line x1="602.70" y1="25.00" x2="618.70" y2="25.00" stroke-width="0.7" opacity="1.0"/><line x1="610.70" y1="17.00" x2="610.70" y2="33.00" stroke-width="0.7" opacity="1.0"/><line x1="589.34" y1="24.92" x2="656.25" y2="121.58" stroke-width="0.7" opacity="0.8"/><line x1="657.61" y1="129.99" x2="715.21" y2="-29.00" stroke-width="0.7" opacity="0.8"/><line x1="695.65" y1="-24.98" x2="753.58" y2="134.94" stroke-width="0.7" opacity="0.8"/><line x1="661.35" y1="66.00" x2="758.60" y2="66.00" stroke-width="0.7" opacity="0.8"/><line x1="752.08" y1="-23.91" x2="789.84" y2="131.41" stroke-width="0.7" opacity="0.8"/><line x1="772.83" y1="129.39" x2="810.90" y2="9.96" stroke-width="0.7" opacity="0.8"/><line x1="804.20" y1="9.01" x2="837.34" y2="113.00" stroke-width="0.7" opacity="0.8"/><line x1="825.38" y1="132.17" x2="863.27" y2="-23.69" stroke-width="0.7" opacity="0.8"/><line x1="-259.92" y1="0.00" x2="937.73" y2="0.00" stroke-width="0.7" opacity="0.8"/><line x1="-256.34" y1="100.00" x2="940.28" y2="100.00" stroke-width="0.7" opacity="0.8"/><line x1="-251.65" y1="50.00" x2="946.25" y2="50.00" stroke-width="0.7" opacity="0.35200000000000004"/><line x1="-281.12" y1="116.00" x2="968.70" y2="116.00" stroke-width="0.7" opacity="0.288"/><line x1="-301.12" y1="134.00" x2="988.70" y2="134.00" stroke-width="0.7" opacity="0.35200000000000004" stroke-dasharray="26 6 3 6"/><line x1="0.00" y1="-70.00" x2="0.00" y2="160.00" stroke-width="0.7" opacity="0.6400000000000001"/><line x1="858.70" y1="-70.00" x2="858.70" y2="160.00" stroke-width="0.7" opacity="0.6400000000000001"/></g><clipPath id="band"><rect x="-391.1" y="-4.9" width="1469.8" height="109.8"/></clipPath><g fill="none" stroke="#f2f2f2" stroke-linecap="butt" stroke-linejoin="miter" clip-path="url(#band)"><path d="M0.00 104.90 L38.00 9.49 L76.00 104.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="12.92" y1="66.00" x2="63.08" y2="66.00" stroke-width="9.8" opacity="1.0"/><line x1="110.90" y1="-4.90" x2="110.90" y2="71.90" stroke-width="9.8" opacity="1.0"/><line x1="167.10" y1="-4.90" x2="167.10" y2="71.90" stroke-width="9.8" opacity="1.0"/><path d="M167.10 71.90 A28.1 28.1 0 0 1 110.90 71.90" stroke-width="9.8"/><line x1="194.00" y1="0.00" x2="260.00" y2="0.00" stroke-width="9.8" opacity="1.0"/><line x1="227.00" y1="0.00" x2="227.00" y2="104.90" stroke-width="9.8" opacity="1.0"/><path d="M280.00 50.00 a50.9 54.557 0 1 0 101.8 0 a50.9 54.557 0 1 0 -101.8 0 Z M289.80 50.00 a41.10 46.13 0 1 0 82.20 0 a41.10 46.13 0 1 0 -82.20 0 Z" fill="#f2f2f2" fill-rule="evenodd" stroke="none"/><path d="M483.80 0.00 L470.70 0.00 L470.70 100.00 L483.80 100.00" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><path d="M483.80 0.00 A50 50 0 0 1 483.80 100.00" stroke-width="9.8"/><path d="M610.70 0.00 L583.60 0.00 L583.60 104.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="583.60" y1="50.00" x2="610.70" y2="50.00" stroke-width="9.8" opacity="1.0"/><path d="M610.70 0.00 A25 25 0 0 1 610.70 50.00" stroke-width="9.8"/><line x1="606.70" y1="50.00" x2="644.70" y2="104.90" stroke-width="9.8" opacity="1.0"/><path d="M666.70 104.90 L704.70 9.49 L742.70 104.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="679.62" y1="66.00" x2="729.78" y2="66.00" stroke-width="9.8" opacity="1.0"/><path d="M756.70 -4.90 L782.66 86.77 L807.70 31.23 L832.74 86.77 L858.70 -4.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="-147.66" y1="34.18" x2="-147.66" y2="90.18" stroke-width="7.644000000000001" opacity="1.0"/><path d="M-147.66 90.18 A9.82 9.82 0 0 1 -167.30 90.18" stroke-width="7.644000000000001"/><path d="M-125.24 34.18 L-109.05 89.61 L-93.62 59.16 L-78.19 89.61 L-62.00 34.18" stroke-width="7.644000000000001" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/></g></svg></a><a href="index.html">← トップへ戻る</a></div></header>
+
+<div class="top"><div class="wrap">
+  <h1>ウォークインホーム対応の詳細</h1>
+  <p>ウォークインホームで作成した間取り図（PDF）を読み取り、JW_CADの平面詳細図（.jww）の下書きを生成します。本ページでは、入力図面の条件、判別対象、出力データの仕様を記載します。</p>
+</div></div>
+
+<main class="wrap">
+
+  <section>
+    <h2>読み込める図面</h2>
+    <div class="rows">
+      <div><em>入力ファイル</em><p>ウォークインホームから出力したプレゼンボードのPDF。<small>平面図の画像（PNG・JPG）を直接指定することも可能です。</small></p></div>
+      <div><em>画像の抽出</em><p>PDF内の大判画像（約100万画素以上、短辺600px以上）をすべて抽出します。階への割り当ては、画面上で指定します（最大3階）。</p></div>
+      <div><em>縮尺</em><p>1/100相当。1pxあたり約12.5mmを基準とし、12.0〜13.0mmの範囲で自動補正します。<small>寸法線の数値から、縮尺と通り芯位置を検証します。</small></p></div>
+      <div><em>画像条件</em><p>デジタル出力された画像を対象とし、ピクセル単位で判定します。縮尺が適合していることが前提です。印刷物を撮影した画像やスキャン画像など、縮尺・色・線幅が異なる画像は対象外です。</p></div>
+      <div><em>壁の色</em><p>グレーの塗り。明度180〜197を目安に、画像ごとに自動調整します。無彩色（RGBの差が10以内）であること。</p></div>
+      <div><em>壁の幅</em><p>6〜22px（約75〜275mm）の帯。外壁は13px（約160mm）以上とし、内壁より太く描かれていること。</p></div>
+      <div><em>文字</em><p>赤色の文字、または明度140以下の黒色の文字。画像内に描画されていること。部屋名は、Windows標準の文字認識機能で読み取ります。</p></div>
+      <div><em>寸法線</em><p>明度90以下の黒色の細線。長さ150px以上、引出線（目盛り）が3本以上であること。寸法は、建物の最外周まで記入されていること。</p></div>
+      <div><em>建具部</em><p>背景が白（明度235以上）で、線によって描画されていること。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>読み取る内容</h2>
+    <div class="rows">
+      <div><em>壁</em><p>外壁・内壁・腰壁、外部空間（ガレージ・ポーチ・バルコニー）の壁</p></div>
+      <div><em>ドア・戸</em><div><div class="tags"><span>片開き</span><span>親子ドア</span><span>両開き</span><span>片引戸</span><span>引違い戸</span><span>3枚連動片引戸</span><span>折戸</span><span>収納扉</span></div></div></div>
+      <div><em>窓</em><div><div class="tags"><span>引違い窓</span><span>縦すべり窓</span><span>横すべり窓</span><span>FIX窓</span><span>縦すべり＋FIX</span></div></div></div>
+      <div><em>設備</em><p>ユニットバス・便器・キッチン・洗面台・玄関収納</p></div>
+      <div><em>部屋名</em><p>部屋名リストとの照合</p></div>
+      <div><em>その他</em><p>玄関の框（土間の段差）・家具線</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>読み取り方</h2>
+    <div class="rows">
+      <div><em>縮尺</em><p>寸法線の数値を読み取り、縮尺と通り芯の位置を検証します。</p></div>
+      <div><em>文字</em><p>赤色の文字と、明度140以下の黒色の文字を検出して除去したうえで、壁を判定します。部屋名は、文字認識の結果を部屋名リストと照合します。</p></div>
+      <div><em>壁</em><p>グレーの帯を、910 → 455 → 227.5mmのグリッド順に、段階的に検出します（前の段階で確定した壁は、後の段階で消しません）。外壁と内壁は帯の幅で、腰壁は塗りのない帯として判別します。</p></div>
+      <div><em>建具</em><p>開口部の背景が白であることを手掛かりに、開き戸の円弧、引戸の引込、折戸の斜線などの描画から、種別と開き勝手を判別します。</p></div>
+      <div><em>窓</em><p>窓記号（例：16020H）がある場合は、記号から幅を読み取ります。</p></div>
+      <div><em>設備</em><p>ユニットバス・便器・キッチン・洗面台は、描画の位置と向きから判別します。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>対応している部品（建具・住設）</h2>
+    <p class="lead">次のメーカー・商品の部品を配置できます。サイズは、開口寸法・間口にもっとも近いものを自動で選択します。部品集（部品データ）は、メーカーのCADデータの利用条件を遵守するため、同梱していません。部品集の作成は、本ツールの入手者に委ねます（作成手順は、配布物の docs に収録した、AI 向けの指示書に記載）。部品集にない部品は、汎用の形状で作図します。</p>
+    <div class="rows">
+      <div><em>窓</em><div><div class="tags"><span>YKK AP APW430（樹脂トリプル窓）</span><span>LIXIL EW</span></div></div></div>
+      <div><em>室内ドア・引戸</em><div><div class="tags"><span>パナソニック ベリティス</span><span>LIXIL ラシッサ</span></div></div></div>
+      <div><em>玄関ドア</em><div><div class="tags"><span>YKK AP イノベスト</span><span>LIXIL ジエスタ2</span></div></div></div>
+      <div><em>キッチン</em><div><div class="tags"><span>パナソニック リビングステーション V-style（I型・IH・フラット対面）</span><span>TOTO ミッテ I型</span></div></div></div>
+      <div><em>洗面台</em><div><div class="tags"><span>パナソニック M-Line</span><span>パナソニック C-Line</span></div></div></div>
+      <div><em>浴室（UB）</em><div><div class="tags"><span>パナソニック ビバス標準（1616・1621）</span></div></div></div>
+      <div><em>便器</em><div><div class="tags"><span>TOTO GG（ウォシュレット一体形便器）</span></div></div></div>
+    </div>
+    <p class="note">記載の製品名は各社の商標または登録商標です。本プログラムは各社と関係のない、個人による非公式のツールです。</p>
+  </section>
+
+  <section>
+    <h2>出力するデータ</h2>
+    <div class="pair">
+      <figure><img src="in_1F.jpg" alt="入力：ウォークインホームの平面図"><figcaption>INPUT　ウォークインホームの平面図</figcaption></figure>
+      <svg class="ar" width="96" height="16" viewBox="0 0 96 16" aria-hidden="true"><path d="M0 15H95.5M75.5 7.8L95.2 15" fill="none" stroke="#15181b" stroke-width="1.2" shape-rendering="geometricPrecision"/></svg>
+      <figure class="out"><img src="out_1F.jpg" alt="出力：JW_CAD図面データ"><figcaption>OUTPUT　JW_CAD図面データ（.jww）</figcaption></figure>
+    </div>
+    <div class="rows">
+      <div><em>形式</em><p>JW_CADの図面ファイル（.jww）。階ごとに1ファイル（1F.jww・2F.jww・3F.jww）。</p></div>
+      <div><em>図面種別</em><p>平面詳細図。縮尺1/50。</p></div>
+      <div><em>壁の層構成</em><p>壁芯を基準に、各層の線を作図します。層厚は、画面上で数値を指定して変更できます。</p></div>
+      <div><em>柱・間柱</em><p>柱は105mm角とし、壁端部・L字・T字・十字の交点に配置します。その他は1820mm間隔とします。間柱は105×45mmとし、455mmグリッド上に配置します。</p></div>
+      <div><em>モジュール</em><p>壁位置は、910mm／455mm（半グリッド227.5mm）のモジュールに合わせます。</p></div>
+      <div><em>建具・住設</em><p>部品集（.jww）から、ドア・窓・住設の部品をブロックとして配置します。部品集にない部品は、汎用の形状で作図します。メーカーの部品集は、本ツールの入手者が作成します。</p></div>
+      <div><em>線属性</em><p>壁線・最外周・最内周・柱・間柱・通り芯・住設と家具・ハッチング・見え線・内装建具・外部建具・玄関ドアの各線について、線色・線種・レイヤを、画面上で指定できます。</p></div>
+      <div><em>確認用画像</em><p>読み取り結果を原図に重ねたPNG画像。壁と柱／建具の配置／壁の判定／建具の判定／区画の確認／文字の検出。</p></div>
+      <div><em>検査</em><p>作図規則への適合を機械検査し、NG件数と注意件数を出力します。</p></div>
+    </div>
+
+    <table>
+      <tr><th>壁の層（初期値）</th><td class="num">厚さ</td><td>壁芯からの位置（面）</td></tr>
+      <tr><th>外壁</th><td class="num">15mm</td><td class="num">154.5mm（外壁面）</td></tr>
+      <tr><th>通気層</th><td class="num">18mm</td><td class="num">139.5mm</td></tr>
+      <tr><th>付加断熱</th><td class="num">60mm</td><td class="num">121.5mm</td></tr>
+      <tr><th>構造用面材</th><td class="num">9mm</td><td class="num">61.5mm</td></tr>
+      <tr><th>柱</th><td class="num">105mm</td><td class="num">52.5mm（柱面）</td></tr>
+      <tr><th>石膏ボード（室内側）</th><td class="num">12.5mm</td><td class="num">65.0mm（ボード面）</td></tr>
+    </table>
+    <p class="note">位置は、外壁側は各層の外側の面、室内側は石膏ボード面です。ポーチ・ガレージなど外部空間に面する壁には、外部側に付加断熱を設けません。数値は、作者の作図基準による初期値です。</p>
+
+    <table>
+      <tr><th>レイヤ（初期値）</th><td class="num">番号</td><td>内容</td></tr>
+      <tr><th></th><td class="num">3</td><td>壁（構造の線・仕上げの線）、框</td></tr>
+      <tr><th></th><td class="num">4</td><td>通り芯（一点鎖線）、腰壁、窓台</td></tr>
+      <tr><th></th><td class="num">5</td><td>建具（ドア・窓の部品）</td></tr>
+      <tr><th></th><td class="num">6</td><td>家具・設備の記号</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>動作環境</h2>
+    <div class="rows">
+      <div><em>OS</em><p>Windows（文字認識に、Windows標準の機能を使用します）</p></div>
+      <div><em>実行環境</em><p>Python 3.13</p></div>
+      <div><em>図面の確認</em><p>JW_CAD</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer><div class="wrap"><a href="index.html">JW AUTO DRAW</a>　／　記載の製品名は各社の商標または登録商標です。本プログラムは各社と関係のない、個人による非公式のツールです。</div></footer>
+</body>
+</html>
