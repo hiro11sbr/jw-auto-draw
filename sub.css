@@ -1,0 +1,60 @@
+/* ===== サブページ共通の見た目（cad-walkinhome.html の CSS をそのまま取り出したもの）=====
+   cad-walkinhome.html / story.html / howto.html / faq.html が読み込む。
+   ヘッダーは common.css へ移した。それ以外は、色・余白・線とも元のまま。
+   ※ 末尾の「追加の部品」だけが、新ページ用。既存の線・色・余白のルールで作ってある。 */
+:root { --sans:"IBM Plex Sans JP","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif; --mono:"IBM Plex Mono","IBM Plex Sans JP","Yu Gothic UI",Consolas,monospace;  --paper:#f5f3ee; --ink:#15181b; --mu:#6a6e72; --ln:#cfcbc2; --blue:#2457f5; --dark:#0b0d11; --accent:#13254d; }
+* { box-sizing:border-box; margin:0; }
+html { background:var(--paper); }
+body { background:var(--paper); color:var(--ink); font:16px/1.9 var(--sans); }
+.wrap { max-width:1080px; margin:0 auto; padding:0 32px; }
+.top { background:var(--dark); color:#fff; padding:56px 0 64px; }
+.top .sub { color:#7c9bff; }
+.top h1 { font-size:clamp(28px,4vw,46px); font-weight:800; line-height:1.4; margin-top:10px; letter-spacing:.02em; }
+.top p { margin-top:18px; color:#c3c8cf; max-width:42em; }
+.sub { font-size:14px; font-weight:700; letter-spacing:.28em; color:var(--blue); }
+section { padding-top:80px; }
+h2 { font-size:30px; font-weight:800; line-height:1.5; margin-top:6px; }
+.lead { margin-top:14px; color:#3d4248; max-width:46em; }
+.rows { margin-top:28px; border-top:1px solid var(--ink); }
+.rows > div { display:grid; grid-template-columns:180px 1fr; gap:28px; padding:16px 0; border-bottom:1px solid var(--ln); align-items:baseline; }
+.rows em { font-style:normal; font-weight:700; font-size:14px; letter-spacing:.08em; }
+.rows p + p { margin-top:6px; }
+.rows small { display:block; color:var(--mu); font-size:13px; line-height:1.7; margin-top:4px; }
+.tags + small { margin-top:8px; }
+.tags { display:flex; flex-wrap:wrap; gap:8px; }
+.tags span { border:1px solid var(--ink); padding:0 10px; font-size:13.5px; line-height:1.9; }
+table { width:100%; border-collapse:collapse; margin-top:28px; border-top:1px solid var(--ink); font-size:15px; }
+th, td { text-align:left; padding:12px 0; border-bottom:1px solid var(--ln); vertical-align:baseline; }
+th { font-weight:700; width:180px; padding-right:28px; font-size:14px; }
+td.num { font-variant-numeric:tabular-nums; width:120px; }
+.note { margin-top:14px; color:var(--mu); font-size:13px; }
+.pair { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; column-gap:40px; margin-top:32px; }
+.pair figure { justify-self:center; }
+.pair img { display:block; height:min(460px,56vh); width:auto; border:1px solid var(--ln); }
+.pair .out img { border-color:#2a2f36; }
+.pair figcaption { margin-top:10px; font-size:12.5px; color:var(--mu); letter-spacing:.06em; }
+.pair .ar { margin-bottom:26px; }
+.warn > div em { color:#b3261e; }
+footer { margin-top:110px; border-top:1px solid var(--ink); padding:28px 0 56px; color:var(--mu); font-size:13px; letter-spacing:.16em; }
+footer a { color:var(--ink); }
+@media (max-width:760px){
+  .rows > div { grid-template-columns:1fr; gap:4px; }
+  th { width:auto; display:block; padding-bottom:0; border-bottom:0; } td { display:block; } td.num { width:auto; }
+  .pair { column-gap:12px; } .pair .ar { width:40px; } .pair img { height:auto; width:100%; } .pair figure { min-width:0; }
+  .top h1, h2 { text-wrap:balance; }   /* 見出しの折り返しを整える（トップページの h2 と同じ指定） */
+}
+.sub, .eyebrow, .how4 .n, .steps .n, figcaption, .sc span, .cads em, td.num, .adtag { font-family:var(--mono); }
+.how4 .n { font-weight:500; }
+body { font-weight:300; }
+b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700; }
+
+/* ===== 追加の部品（新ページ用）===== */
+/* 文中のリンク：トップページの .ilink と同じ（黒の下線1本） */
+.ilink { color:var(--ink); border-bottom:1px solid var(--ink); text-decoration:none; }
+.ilink:hover { color:var(--accent); border-color:var(--accent); }
+/* 手順・質問の見出し語（STEP 1 / Q1）：表の見出し（.rows em）をそのまま使い、等幅にして数字をそろえる */
+.rows .n { font-family:var(--mono); font-weight:500; }
+/* 画像を入れる場所：点線の枠は、トップページの「未定」（.cads em）と同じ。文字は「広告を入れる場所」と同じ */
+figure.ph { margin-top:32px; }
+figure.ph .box { aspect-ratio:16/9; display:grid; place-items:center; border:1px dashed rgba(21,24,27,.45); color:var(--mu); font-size:13px; letter-spacing:.2em; text-align:center; padding:0 12px; }
+figure.ph figcaption { margin-top:10px; font-size:12.5px; color:var(--mu); letter-spacing:.06em; }

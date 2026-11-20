@@ -6,64 +6,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@200;300;400;500;700&display=swap" rel="stylesheet">
 <title>ウォークインホーム対応｜JW AUTO DRAW</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%230b0d11%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2243%22%20font-size%3D%2228%22%20font-family%3D%22Arial%2CHelvetica%2Csans-serif%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f2f2f2%22%20letter-spacing%3D%221%22%3EJW%3C/text%3E%3Crect%20x%3D%2210%22%20y%3D%2250%22%20width%3D%2244%22%20height%3D%222%22%20fill%3D%22%23f2f2f2%22/%3E%3C/svg%3E">
-<style>
-:root { --sans:"IBM Plex Sans JP","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif; --mono:"IBM Plex Mono","IBM Plex Sans JP","Yu Gothic UI",Consolas,monospace;  --paper:#f5f3ee; --ink:#15181b; --mu:#6a6e72; --ln:#cfcbc2; --blue:#2457f5; --dark:#0b0d11; }
-* { box-sizing:border-box; margin:0; }
-html { background:var(--paper); }
-body { background:var(--paper); color:var(--ink); font:16px/1.9 var(--sans); }
-.wrap { max-width:1080px; margin:0 auto; padding:0 32px; }
-header { background:var(--dark); color:#fff; }
-header .wrap { display:flex; justify-content:space-between; align-items:center; height:64px; }
-header a { color:#cfd3d8; text-decoration:none; font-size:14px; letter-spacing:.14em; }
-header a:hover { color:#fff; }
-header .logo { color:#fff; font-weight:300; letter-spacing:.2em; font-size:15px; }
-.top { background:var(--dark); color:#fff; padding:56px 0 64px; }
-.top .sub { color:#7c9bff; }
-.top h1 { font-size:clamp(28px,4vw,46px); font-weight:800; line-height:1.4; margin-top:10px; letter-spacing:.02em; }
-.top p { margin-top:18px; color:#c3c8cf; max-width:42em; }
-.sub { font-size:14px; font-weight:700; letter-spacing:.28em; color:var(--blue); }
-section { padding-top:80px; }
-h2 { font-size:30px; font-weight:800; line-height:1.5; margin-top:6px; }
-.lead { margin-top:14px; color:#3d4248; max-width:46em; }
-.rows { margin-top:28px; border-top:1px solid var(--ink); }
-.rows > div { display:grid; grid-template-columns:180px 1fr; gap:28px; padding:16px 0; border-bottom:1px solid var(--ln); align-items:baseline; }
-.rows em { font-style:normal; font-weight:700; font-size:14px; letter-spacing:.08em; }
-.rows p + p { margin-top:6px; }
-.rows small { display:block; color:var(--mu); font-size:13px; line-height:1.7; margin-top:4px; }
-.tags + small { margin-top:8px; }
-.tags { display:flex; flex-wrap:wrap; gap:8px; }
-.tags span { border:1px solid var(--ink); padding:0 10px; font-size:13.5px; line-height:1.9; }
-table { width:100%; border-collapse:collapse; margin-top:28px; border-top:1px solid var(--ink); font-size:15px; }
-th, td { text-align:left; padding:12px 0; border-bottom:1px solid var(--ln); vertical-align:baseline; }
-th { font-weight:700; width:180px; padding-right:28px; font-size:14px; }
-td.num { font-variant-numeric:tabular-nums; width:120px; }
-.note { margin-top:14px; color:var(--mu); font-size:13px; }
-.pair { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; column-gap:40px; margin-top:32px; }
-.pair figure { justify-self:center; }
-.pair img { display:block; height:min(460px,56vh); width:auto; border:1px solid var(--ln); }
-.pair .out img { border-color:#2a2f36; }
-.pair figcaption { margin-top:10px; font-size:12.5px; color:var(--mu); letter-spacing:.06em; }
-.pair .ar { margin-bottom:26px; }
-.warn > div em { color:#b3261e; }
-footer { margin-top:110px; border-top:1px solid var(--ink); padding:28px 0 56px; color:var(--mu); font-size:13px; letter-spacing:.16em; }
-footer a { color:var(--ink); }
-@media (max-width:760px){
-  .rows > div { grid-template-columns:1fr; gap:4px; }
-  th { width:auto; display:block; padding-bottom:0; border-bottom:0; } td { display:block; } td.num { width:auto; }
-  .pair { column-gap:12px; } .pair .ar { width:40px; } .pair img { height:auto; width:100%; } .pair figure { min-width:0; }
-}
-.sub, .eyebrow, .how4 .n, .steps .n, figcaption, .sc span, .cads em, td.num, .adtag { font-family:var(--mono); }
-.how4 .n { font-weight:500; }
-body { font-weight:300; }
-b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700; }
-
-.logo .logosvg { display:block; width:210px; height:auto; }
-.logo .logosvg g:first-of-type * { stroke-width:3.4px; }   /* 補助線は、縮小しても消えない細さに */
-</style>
+<link rel="stylesheet" href="sub.css">
+<link rel="stylesheet" href="common.css">
 <script>try{ if("scrollRestoration" in history) history.scrollRestoration="manual"; }catch(e){} window.addEventListener("load",function(){ if(!location.hash) window.scrollTo(0,0); });</script>
 </head>
 <body>
-<header><div class="wrap"><a class="logo" href="index.html" aria-label="JW AUTO DRAW"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-391.1 -168.0 1469.8 436.0" class="logosvg" role="img" aria-label="JW AUTO DRAW"><g fill="none" stroke="#f2f2f2" stroke-linecap="butt"><line x1="-4.83" y1="118.24" x2="45.54" y2="-20.83" stroke-width="0.7" opacity="0.8"/><line x1="32.00" y1="-16.57" x2="84.07" y2="127.18" stroke-width="0.7" opacity="0.8"/><line x1="-11.35" y1="66.00" x2="72.78" y2="66.00" stroke-width="0.7" opacity="0.8"/><line x1="110.90" y1="-13.24" x2="110.90" y2="101.67" stroke-width="0.7" opacity="0.8"/><line x1="167.10" y1="-19.64" x2="167.10" y2="85.99" stroke-width="0.7" opacity="0.8"/><circle cx="139.00" cy="71.90" r="28.1" stroke-width="0.7" opacity="0.64"/><line x1="131.00" y1="71.90" x2="147.00" y2="71.90" stroke-width="0.7" opacity="1.0"/><line x1="139.00" y1="63.90" x2="139.00" y2="79.90" stroke-width="0.7" opacity="1.0"/><line x1="160.11" y1="0.00" x2="280.23" y2="0.00" stroke-width="0.7" opacity="0.8"/><line x1="227.00" y1="-29.75" x2="227.00" y2="125.29" stroke-width="0.7" opacity="0.8"/><ellipse cx="330.90" cy="50.00" rx="52.00" ry="56.00" stroke-width="0.7" opacity="0.64"/><line x1="322.90" y1="50.00" x2="338.90" y2="50.00" stroke-width="0.7" opacity="1.0"/><line x1="330.90" y1="42.00" x2="330.90" y2="58.00" stroke-width="0.7" opacity="1.0"/><line x1="508.42" y1="0.00" x2="458.78" y2="0.00" stroke-width="0.7" opacity="0.8"/><line x1="470.70" y1="-24.51" x2="470.70" y2="130.57" stroke-width="0.7" opacity="0.8"/><line x1="449.10" y1="100.00" x2="511.07" y2="100.00" stroke-width="0.7" opacity="0.8"/><circle cx="483.80" cy="50.00" r="50" stroke-width="0.7" opacity="0.64"/><line x1="475.80" y1="50.00" x2="491.80" y2="50.00" stroke-width="0.7" opacity="1.0"/><line x1="483.80" y1="42.00" x2="483.80" y2="58.00" stroke-width="0.7" opacity="1.0"/><line x1="636.16" y1="0.00" x2="573.94" y2="0.00" stroke-width="0.7" opacity="0.8"/><line x1="583.60" y1="-27.71" x2="583.60" y2="128.27" stroke-width="0.7" opacity="0.8"/><line x1="567.77" y1="50.00" x2="619.51" y2="50.00" stroke-width="0.7" opacity="0.8"/><circle cx="610.70" cy="25.00" r="25" stroke-width="0.7" opacity="0.64"/><line x1="602.70" y1="25.00" x2="618.70" y2="25.00" stroke-width="0.7" opacity="1.0"/><line x1="610.70" y1="17.00" x2="610.70" y2="33.00" stroke-width="0.7" opacity="1.0"/><line x1="589.34" y1="24.92" x2="656.25" y2="121.58" stroke-width="0.7" opacity="0.8"/><line x1="657.61" y1="129.99" x2="715.21" y2="-29.00" stroke-width="0.7" opacity="0.8"/><line x1="695.65" y1="-24.98" x2="753.58" y2="134.94" stroke-width="0.7" opacity="0.8"/><line x1="661.35" y1="66.00" x2="758.60" y2="66.00" stroke-width="0.7" opacity="0.8"/><line x1="752.08" y1="-23.91" x2="789.84" y2="131.41" stroke-width="0.7" opacity="0.8"/><line x1="772.83" y1="129.39" x2="810.90" y2="9.96" stroke-width="0.7" opacity="0.8"/><line x1="804.20" y1="9.01" x2="837.34" y2="113.00" stroke-width="0.7" opacity="0.8"/><line x1="825.38" y1="132.17" x2="863.27" y2="-23.69" stroke-width="0.7" opacity="0.8"/><line x1="-259.92" y1="0.00" x2="937.73" y2="0.00" stroke-width="0.7" opacity="0.8"/><line x1="-256.34" y1="100.00" x2="940.28" y2="100.00" stroke-width="0.7" opacity="0.8"/><line x1="-251.65" y1="50.00" x2="946.25" y2="50.00" stroke-width="0.7" opacity="0.35200000000000004"/><line x1="-281.12" y1="116.00" x2="968.70" y2="116.00" stroke-width="0.7" opacity="0.288"/><line x1="-301.12" y1="134.00" x2="988.70" y2="134.00" stroke-width="0.7" opacity="0.35200000000000004" stroke-dasharray="26 6 3 6"/><line x1="0.00" y1="-70.00" x2="0.00" y2="160.00" stroke-width="0.7" opacity="0.6400000000000001"/><line x1="858.70" y1="-70.00" x2="858.70" y2="160.00" stroke-width="0.7" opacity="0.6400000000000001"/></g><clipPath id="band"><rect x="-391.1" y="-4.9" width="1469.8" height="109.8"/></clipPath><g fill="none" stroke="#f2f2f2" stroke-linecap="butt" stroke-linejoin="miter" clip-path="url(#band)"><path d="M0.00 104.90 L38.00 9.49 L76.00 104.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="12.92" y1="66.00" x2="63.08" y2="66.00" stroke-width="9.8" opacity="1.0"/><line x1="110.90" y1="-4.90" x2="110.90" y2="71.90" stroke-width="9.8" opacity="1.0"/><line x1="167.10" y1="-4.90" x2="167.10" y2="71.90" stroke-width="9.8" opacity="1.0"/><path d="M167.10 71.90 A28.1 28.1 0 0 1 110.90 71.90" stroke-width="9.8"/><line x1="194.00" y1="0.00" x2="260.00" y2="0.00" stroke-width="9.8" opacity="1.0"/><line x1="227.00" y1="0.00" x2="227.00" y2="104.90" stroke-width="9.8" opacity="1.0"/><path d="M280.00 50.00 a50.9 54.557 0 1 0 101.8 0 a50.9 54.557 0 1 0 -101.8 0 Z M289.80 50.00 a41.10 46.13 0 1 0 82.20 0 a41.10 46.13 0 1 0 -82.20 0 Z" fill="#f2f2f2" fill-rule="evenodd" stroke="none"/><path d="M483.80 0.00 L470.70 0.00 L470.70 100.00 L483.80 100.00" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><path d="M483.80 0.00 A50 50 0 0 1 483.80 100.00" stroke-width="9.8"/><path d="M610.70 0.00 L583.60 0.00 L583.60 104.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="583.60" y1="50.00" x2="610.70" y2="50.00" stroke-width="9.8" opacity="1.0"/><path d="M610.70 0.00 A25 25 0 0 1 610.70 50.00" stroke-width="9.8"/><line x1="606.70" y1="50.00" x2="644.70" y2="104.90" stroke-width="9.8" opacity="1.0"/><path d="M666.70 104.90 L704.70 9.49 L742.70 104.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="679.62" y1="66.00" x2="729.78" y2="66.00" stroke-width="9.8" opacity="1.0"/><path d="M756.70 -4.90 L782.66 86.77 L807.70 31.23 L832.74 86.77 L858.70 -4.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="-147.66" y1="34.18" x2="-147.66" y2="90.18" stroke-width="7.644000000000001" opacity="1.0"/><path d="M-147.66 90.18 A9.82 9.82 0 0 1 -167.30 90.18" stroke-width="7.644000000000001"/><path d="M-125.24 34.18 L-109.05 89.61 L-93.62 59.16 L-78.19 89.61 L-62.00 34.18" stroke-width="7.644000000000001" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/></g></svg></a><a href="index.html">← トップへ戻る</a></div></header>
+<header class="sitehdr" id="sitehdr"></header>
+<script src="common.js"></script>
 
 <div class="top"><div class="wrap">
   <h1>ウォークインホーム対応の詳細</h1>
@@ -72,8 +21,8 @@ b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700
 
 <main class="wrap">
 
-  <section>
-    <h2>読み込める図面</h2>
+  <section id="input">
+    <h2>入力の条件</h2>
     <div class="rows">
       <div><em>入力ファイル</em><p>ウォークインホームから出力したプレゼンボードのPDF。<small>平面図の画像（PNG・JPG）を直接指定することも可能です。</small></p></div>
       <div><em>画像の抽出</em><p>PDF内の大判画像（約100万画素以上、短辺600px以上）をすべて抽出します。階への割り当ては、画面上で指定します（最大3階）。</p></div>
@@ -87,7 +36,7 @@ b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700
     </div>
   </section>
 
-  <section>
+  <section id="read">
     <h2>読み取る内容</h2>
     <div class="rows">
       <div><em>壁</em><p>外壁・内壁・腰壁、外部空間（ガレージ・ポーチ・バルコニー）の壁</p></div>
@@ -99,7 +48,7 @@ b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700
     </div>
   </section>
 
-  <section>
+  <section id="method">
     <h2>読み取り方</h2>
     <div class="rows">
       <div><em>縮尺</em><p>寸法線の数値を読み取り、縮尺と通り芯の位置を検証します。</p></div>
@@ -111,8 +60,8 @@ b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700
     </div>
   </section>
 
-  <section>
-    <h2>対応している部品（建具・住設）</h2>
+  <section id="parts">
+    <h2>対応部品</h2>
     <p class="lead">次のメーカー・商品の部品を配置できます。サイズは、開口寸法・間口にもっとも近いものを自動で選択します。部品集（部品データ）は、メーカーのCADデータの利用条件を遵守するため、同梱していません。部品集の作成は、本ツールの入手者に委ねます（作成手順は、配布物の docs に収録した、AI 向けの指示書に記載）。部品集にない部品は、汎用の形状で作図します。</p>
     <div class="rows">
       <div><em>窓</em><div><div class="tags"><span>YKK AP APW430（樹脂トリプル窓）</span><span>LIXIL EW</span></div></div></div>
@@ -126,8 +75,8 @@ b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700
     <p class="note">記載の製品名は各社の商標または登録商標です。本プログラムは各社と関係のない、個人による非公式のツールです。</p>
   </section>
 
-  <section>
-    <h2>出力するデータ</h2>
+  <section id="output">
+    <h2>出力</h2>
     <div class="pair">
       <figure><img src="in_1F.jpg" alt="入力：ウォークインホームの平面図"><figcaption>INPUT　ウォークインホームの平面図</figcaption></figure>
       <svg class="ar" width="96" height="16" viewBox="0 0 96 16" aria-hidden="true"><path d="M0 15H95.5M75.5 7.8L95.2 15" fill="none" stroke="#15181b" stroke-width="1.2" shape-rendering="geometricPrecision"/></svg>
@@ -165,7 +114,7 @@ b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700
     </table>
   </section>
 
-  <section>
+  <section id="env">
     <h2>動作環境</h2>
     <div class="rows">
       <div><em>OS</em><p>Windows（文字認識に、Windows標準の機能を使用します）</p></div>
@@ -173,6 +122,9 @@ b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700
       <div><em>図面の確認</em><p>JW_CAD</p></div>
     </div>
   </section>
+
+  <div class="next"><a href="howto.html"><span><em>NEXT</em><b>使い方</b></span><svg width="44" height="10" viewBox="0 0 44 10" aria-hidden="true"><path d="M0 9H43.5M29.5 3.9L43.2 9" fill="none" stroke="currentColor" stroke-width="1.2" shape-rendering="geometricPrecision"/></svg></a></div>
+  <p class="backtop"><a href="index.html">← トップへ戻る</a></p>
 
 </main>
 

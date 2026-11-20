@@ -1,0 +1,54 @@
+/* ===== 全ページ共通：ヘッダー・「次はこれ」・トップへ戻る =====
+   色・線・余白は、既存ページ（cad-walkinhome.html）のヘッダーと、対応CAD一覧の「詳細を見る」に合わせてある。
+   ヘッダーの中身は common.js が差し込む（ナビを変えるときは common.js の1か所だけ直す）。 */
+
+/* ヘッダー（黒い帯・ロゴ・ナビ） */
+.sitehdr { background:#0b0d11; color:#fff; min-height:64px; position:sticky; top:0; z-index:100; }
+.sitehdr .wrap { display:flex; justify-content:space-between; align-items:center; gap:24px; height:64px; }
+.sitehdr a { color:#cfd3d8; text-decoration:none; font-size:14px; letter-spacing:.14em; }
+.sitehdr a:hover { color:#fff; }
+.sitehdr .logo { display:block; flex:none; }
+.sitehdr .logosvg { display:block; width:150px; height:auto; }   /* 小さいロゴは、下書き線を外す（トップの動くロゴは別）。残すのは、文字の下端の横線1本だけ */
+.sitehdr .logosvg .base { stroke-width:.6px; vector-effect:non-scaling-stroke; }   /* 縮小しても、細くなりすぎない */
+.sitehdr nav { display:flex; gap:28px; }
+.sitehdr nav a { padding:6px 0; border-bottom:1px solid transparent; }
+.sitehdr nav a[aria-current="page"] { color:#fff; border-bottom-color:#fff; }
+
+/* トップページ：最初は見せず、スクロールし始めたら上部に現れて固定される */
+body.home .sitehdr { position:fixed; left:0; right:0; top:0; transform:translateY(-100%); visibility:hidden; transition:transform .3s ease, visibility 0s linear .3s; }
+body.home.scrolled .sitehdr { transform:none; visibility:visible; transition:transform .3s ease, visibility 0s; }
+
+/* 「次はこれ」（本文の最後）。線の使い方は、表（.rows）と同じ：上は黒の実線、下は薄い線 */
+.next { margin-top:80px; border-top:1px solid var(--ink); }
+.next a { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 0; border-bottom:1px solid var(--ln); color:var(--ink); text-decoration:none; }
+.next em { display:block; font:500 13px/1.6 var(--mono); font-style:normal; letter-spacing:.2em; color:var(--accent); }
+.next b { display:block; font-size:20px; line-height:1.6; font-weight:700; }
+.next svg { flex:none; width:44px; height:10px; overflow:visible; }
+.next a:hover { color:var(--accent); }
+
+/* トップへ戻る */
+.backtop { margin-top:24px; font-size:14px; }
+.backtop a { color:var(--ink); text-decoration:none; font-weight:700; letter-spacing:.08em; border-bottom:1px solid var(--ink); padding-bottom:2px; }
+.backtop a:hover { color:var(--accent); border-color:var(--accent); }
+
+/* フッターの SNS リンク：1色のロゴ（文字と同じ黒）。色の付いたブランドカラーは使わない。押す範囲は44px角 */
+footer .sns { margin:6px 0 0 -11px; display:flex; flex-wrap:wrap; gap:0 4px; }
+footer .sns a { display:flex; align-items:center; justify-content:center; width:44px; height:44px; color:var(--ink); }
+footer .sns svg { display:block; width:22px; height:22px; }
+footer .sns a:hover { color:var(--accent); }
+
+@media (max-width:760px) {
+  /* ロゴの下にナビを1行で並べる（5項目が1行に収まらない幅では、横に送れる） */
+  .sitehdr { min-height:0; }
+  .sitehdr .wrap { display:block; height:auto; padding-top:12px; padding-bottom:0; }
+  .sitehdr .logosvg { width:112px; }
+  .sitehdr nav { gap:10px; justify-content:space-between; overflow-x:auto; scrollbar-width:none; margin-top:2px; }
+  .sitehdr nav::-webkit-scrollbar { display:none; }
+  .sitehdr nav a { flex:none; font-size:12px; letter-spacing:0; padding:10px 0 12px; }
+  .next { margin-top:56px; }
+  .next a { padding:22px 0; gap:16px; }
+  .next b { font-size:17px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  body.home .sitehdr, body.home.scrolled .sitehdr { transition:none; }
+}
