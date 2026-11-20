@@ -1,5 +1,5 @@
 /* ===== サブページ共通の見た目（cad-walkinhome.html の CSS をそのまま取り出したもの）=====
-   cad-walkinhome.html / howto.html / faq.html が読み込む。
+   cad-walkinhome.html / story.html / howto.html / faq.html が読み込む。
    ヘッダーは common.css へ移した。それ以外は、色・余白・線とも元のまま。
    ※ 末尾の「追加の部品」だけが、新ページ用。既存の線・色・余白のルールで作ってある。 */
 :root { --sans:"IBM Plex Sans JP","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif; --mono:"IBM Plex Mono","IBM Plex Sans JP","Yu Gothic UI",Consolas,monospace;  --paper:#f5f3ee; --ink:#15181b; --mu:#6a6e72; --ln:#cfcbc2; --blue:#2457f5; --dark:#0b0d11; --accent:#13254d; }
@@ -55,6 +55,11 @@ b, strong, h1, h2, h3, th, .rows em, .pre em, .how4 b, .cads b { font-weight:700
 /* 手順・質問の見出し語（STEP 1 / Q1）：表の見出し（.rows em）をそのまま使い、等幅にして数字をそろえる */
 .rows .n { font-family:var(--mono); font-weight:500; }
 /* 画像を入れる場所：点線の枠は、トップページの「未定」（.cads em）と同じ。文字は「広告を入れる場所」と同じ */
-figure.ph { margin-top:32px; }
+figure.ph { margin-top:32px; display:none; }   /* 公開ページでは隠す。アドレスに ?edit を付けたときだけ見える（common.js が html に class="edit" を付ける） */
+.edit figure.ph { display:block; }
+/* 写真が入ったあとの表示：画像の枠線は、図の枠（.pair img）と同じ */
+figure.pic { margin-top:32px; }
+figure.pic img { display:block; max-width:100%; height:auto; border:1px solid var(--ln); }
+figure.pic figcaption { margin-top:10px; font-size:12.5px; color:var(--mu); letter-spacing:.06em; }
 figure.ph .box { aspect-ratio:16/9; display:grid; place-items:center; border:1px dashed rgba(21,24,27,.45); color:var(--mu); font-size:13px; letter-spacing:.2em; text-align:center; padding:0 12px; }
 figure.ph figcaption { margin-top:10px; font-size:12.5px; color:var(--mu); letter-spacing:.06em; }

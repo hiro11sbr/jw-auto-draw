@@ -8,7 +8,8 @@
     ["index.html", "トップ", function (c) { return c === "index"; }],
     ["index.html#cad", "対応CAD", function (c) { return c.indexOf("cad-") === 0; }],
     ["howto.html", "使い方", function (c) { return c === "howto"; }],
-    ["faq.html", "FAQ", function (c) { return c === "faq"; }]
+    ["faq.html", "FAQ", function (c) { return c === "faq"; }],
+    ["story.html", "開発の経緯", function (c) { return c === "story"; }]
   ];
   var LOGO = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-176 -10 1040 124" class="logosvg" role="img" aria-label="JW AUTO DRAW"><line class="base" x1="-176" y1="100" x2="864" y2="100" stroke="#f2f2f2" opacity="0.8"/><clipPath id="hband"><rect x="-391.1" y="-4.9" width="1469.8" height="109.8"/></clipPath><g fill="none" stroke="#f2f2f2" stroke-linecap="butt" stroke-linejoin="miter" clip-path="url(#hband)"><path d="M0.00 104.90 L38.00 9.49 L76.00 104.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="12.92" y1="66.00" x2="63.08" y2="66.00" stroke-width="9.8" opacity="1.0"/><line x1="110.90" y1="-4.90" x2="110.90" y2="71.90" stroke-width="9.8" opacity="1.0"/><line x1="167.10" y1="-4.90" x2="167.10" y2="71.90" stroke-width="9.8" opacity="1.0"/><path d="M167.10 71.90 A28.1 28.1 0 0 1 110.90 71.90" stroke-width="9.8"/><line x1="194.00" y1="0.00" x2="260.00" y2="0.00" stroke-width="9.8" opacity="1.0"/><line x1="227.00" y1="0.00" x2="227.00" y2="104.90" stroke-width="9.8" opacity="1.0"/><path d="M280.00 50.00 a50.9 54.557 0 1 0 101.8 0 a50.9 54.557 0 1 0 -101.8 0 Z M289.80 50.00 a41.10 46.13 0 1 0 82.20 0 a41.10 46.13 0 1 0 -82.20 0 Z" fill="#f2f2f2" fill-rule="evenodd" stroke="none"/><path d="M483.80 0.00 L470.70 0.00 L470.70 100.00 L483.80 100.00" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><path d="M483.80 0.00 A50 50 0 0 1 483.80 100.00" stroke-width="9.8"/><path d="M610.70 0.00 L583.60 0.00 L583.60 104.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="583.60" y1="50.00" x2="610.70" y2="50.00" stroke-width="9.8" opacity="1.0"/><path d="M610.70 0.00 A25 25 0 0 1 610.70 50.00" stroke-width="9.8"/><line x1="606.70" y1="50.00" x2="644.70" y2="104.90" stroke-width="9.8" opacity="1.0"/><path d="M666.70 104.90 L704.70 9.49 L742.70 104.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="679.62" y1="66.00" x2="729.78" y2="66.00" stroke-width="9.8" opacity="1.0"/><path d="M756.70 -4.90 L782.66 86.77 L807.70 31.23 L832.74 86.77 L858.70 -4.90" stroke-width="9.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/><line x1="-147.66" y1="34.18" x2="-147.66" y2="90.18" stroke-width="7.644000000000001" opacity="1.0"/><path d="M-147.66 90.18 A9.82 9.82 0 0 1 -167.30 90.18" stroke-width="7.644000000000001"/><path d="M-125.24 34.18 L-109.05 89.61 L-93.62 59.16 L-78.19 89.61 L-62.00 34.18" stroke-width="7.644000000000001" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/></g></svg>`;
   /* フッターの SNS リンク（全ページ共通）。リンク先を変えるときは、ここだけを直す */
@@ -30,6 +31,8 @@
     fw.appendChild(p);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addSns); else addSns();
+  /* 編集用の表示：アドレスの末尾に ?edit を付けたときだけ、画像を入れる枠（figure.ph）が見える。公開の表示では隠れている */
+  if (/[?&]edit(=|&|$)/.test(location.search)) document.documentElement.classList.add("edit");
   var host = document.getElementById("sitehdr");
   if (!host) return;
   function key(p) { p = (p || "").split("/").pop().replace(/\.html$/, ""); return p || "index"; }
