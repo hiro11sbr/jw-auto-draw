@@ -32,9 +32,10 @@ body.home.scrolled .sitehdr { transform:none; visibility:visible; transition:tra
 .backtop a:hover { color:var(--accent); border-color:var(--accent); }
 
 /* フッターの SNS リンク：1色のロゴ（文字と同じ黒）。色の付いたブランドカラーは使わない。押す範囲は44px角 */
-footer .sns { margin:6px 0 0 -11px; display:flex; flex-wrap:wrap; gap:0 4px; }
-footer .sns a { display:flex; align-items:center; justify-content:center; width:44px; height:44px; color:var(--ink); }
-footer .sns svg { display:block; width:22px; height:22px; }
+footer .sns { margin:6px 0 0 -11px; display:flex; flex-wrap:wrap; gap:0 12px; }
+footer .sns a { display:flex; align-items:center; gap:10px; min-height:44px; padding:0 8px 0 11px; color:var(--ink); text-decoration:none; }
+footer .sns svg { display:block; width:22px; height:22px; flex:none; }
+footer .sns span { font-size:13px; letter-spacing:.08em; }   /* ユーザー名：フッターの文字と同じ大きさ */
 footer .sns a:hover { color:var(--accent); }
 
 @media (max-width:760px) {

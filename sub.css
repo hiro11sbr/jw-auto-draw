@@ -1,5 +1,5 @@
 /* ===== サブページ共通の見た目（cad-walkinhome.html の CSS をそのまま取り出したもの）=====
-   cad-walkinhome.html / story.html / howto.html / faq.html が読み込む。
+   cad-walkinhome.html / howto.html / faq.html が読み込む。
    ヘッダーは common.css へ移した。それ以外は、色・余白・線とも元のまま。
    ※ 末尾の「追加の部品」だけが、新ページ用。既存の線・色・余白のルールで作ってある。 */
 :root { --sans:"IBM Plex Sans JP","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif; --mono:"IBM Plex Mono","IBM Plex Sans JP","Yu Gothic UI",Consolas,monospace;  --paper:#f5f3ee; --ink:#15181b; --mu:#6a6e72; --ln:#cfcbc2; --blue:#2457f5; --dark:#0b0d11; --accent:#13254d; }
