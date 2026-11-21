@@ -136,10 +136,15 @@ main { position:relative; }
 .adgrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:var(--head); border-top:1px solid var(--ink); border-left:1px solid var(--ln); }
 .adbox { position:relative; min-height:150px; border-right:1px solid var(--ln); border-bottom:1px solid var(--ln); padding:40px 10px 14px; }
 .adbox .adtag { position:absolute; left:12px; top:10px; margin:0; }
-.adin { min-height:80px; display:flex; align-items:flex-start; justify-content:center; color:var(--mu); font-size:13px; }
+.adin { flex:1; width:100%; display:flex; min-height:80px; }
+.adcard { display:flex; flex-direction:column; width:100%; background:#fff; border:1px solid var(--ln); text-decoration:none; color:var(--ink); }
+.adcard .adimg { display:flex; align-items:center; justify-content:center; height:150px; padding:10px; }
+.adcard .adimg img { max-width:100%; max-height:100%; object-fit:contain; }
+.adcard .adname { display:block; padding:0 12px; font-size:13.5px; line-height:1.6; min-height:3.2em; margin-bottom:12px; }
+.adcard .adbtn { display:block; margin:auto 12px 12px; text-align:center; background:var(--accent); color:#fff; font-size:13px; letter-spacing:.08em; padding:10px 8px; }
+.adcard:hover .adbtn { opacity:.85; }
+@media (max-width:640px) { .adgrid { grid-template-columns:1fr; } }
 .adbox { display:flex; flex-direction:column; }
-.adin { flex:1; width:100%; }
-.adin > div { max-width:100% !important; margin:0 auto; }
 .adin:empty::before { content:"広告を入れる場所"; letter-spacing:.2em; opacity:.6; }
 .adtag { display:inline-block; font-size:11px; letter-spacing:.14em; border:1px solid var(--mu); color:var(--mu); padding:0 8px; margin-left:12px; vertical-align:middle; font-weight:400; line-height:1.6; }
 
@@ -304,42 +309,9 @@ footer { margin-top:112px; border-top:1px solid var(--ink); padding:32px 0 56px;
   <section class="sec" id="ads">
     <h2>作図環境を整える<span class="adtag">広告</span></h2>
     <div class="adgrid">
-      <div class="adbox"><span class="adtag">広告</span><div class="adin"><!-- START MoshimoAffiliateEasyLink -->
-<script type="text/javascript">
-(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
-b[a]=b[a]||function(){arguments.currentScript=c.currentScript
-||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
-c.getElementById(a)||(d=c.createElement(f),d.src=g,
-d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
-(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
-msmaflink({"n":"やさしく学ぶ Jw_cad 8《デラックス版》","b":"","t":"","d":"https:\/\/thumbnail.image.rakuten.co.jp","c_p":"\/@0_mall\/book\/cabinet\/2272","p":["\/9784767832272_1_3.jpg","\/9784767832272_2.jpg","\/9784767832272_3.jpg"],"u":{"u":"https:\/\/item.rakuten.co.jp\/book\/17700134\/","t":"rakuten","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/item.rakuten.co.jp\/book\/17700134\/","a_id":5914011,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":1}],"eid":"OgVqG","s":"s"});
-</script>
-<div id="msmaflink-OgVqG">リンク</div>
-<!-- MoshimoAffiliateEasyLink END --></div></div>
-      <div class="adbox"><span class="adtag">広告</span><div class="adin"><!-- START MoshimoAffiliateEasyLink -->
-<script type="text/javascript">
-(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
-b[a]=b[a]||function(){arguments.currentScript=c.currentScript
-||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
-c.getElementById(a)||(d=c.createElement(f),d.src=g,
-d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
-(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
-msmaflink({"n":"iClever ワイヤレステンキー KP09","b":"","t":"","d":"https:\/\/thumbnail.image.rakuten.co.jp","c_p":"\/@0_mall\/kitcut-ps\/cabinet\/item\/153","p":["\/p-269613.jpg","\/p-269614.jpg","\/r-269612.jpg"],"u":{"u":"https:\/\/item.rakuten.co.jp\/kitcut-ps\/51661736741-1\/","t":"rakuten","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/item.rakuten.co.jp\/kitcut-ps\/51661736741-1\/","a_id":5914011,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":1}],"eid":"bZd1k","s":"s"});
-</script>
-<div id="msmaflink-bZd1k">リンク</div>
-<!-- MoshimoAffiliateEasyLink END --></div></div>
-      <div class="adbox"><span class="adtag">広告</span><div class="adin"><!-- START MoshimoAffiliateEasyLink -->
-<script type="text/javascript">
-(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
-b[a]=b[a]||function(){arguments.currentScript=c.currentScript
-||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
-c.getElementById(a)||(d=c.createElement(f),d.src=g,
-d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
-(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
-msmaflink({"n":"グリーンハウス モニターアーム GH-AMDX1-BK","b":"","t":"","d":"https:\/\/thumbnail.image.rakuten.co.jp","c_p":"\/@0_mall\/sproutsllc\/cabinet\/n20260803133805","p":["\/b0g34jt9gq-1.jpg","\/b0g34jt9gq-2.jpg","\/b0g34jt9gq-3.jpg"],"u":{"u":"https:\/\/item.rakuten.co.jp\/sproutsllc\/s-b0g34jt9gq-20260803\/","t":"rakuten","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/item.rakuten.co.jp\/sproutsllc\/s-b0g34jt9gq-20260803\/","a_id":5914011,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":1}],"eid":"UDO0k","s":"s"});
-</script>
-<div id="msmaflink-UDO0k">リンク</div>
-<!-- MoshimoAffiliateEasyLink END --></div></div>
+      <div class="adbox"><span class="adtag">広告</span><div class="adin"><a class="adcard" href="https://af.moshimo.com/af/c/click?a_id=5914011&amp;p_id=54&amp;pc_id=54&amp;pl_id=27059&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17700134%2F" target="_blank" rel="sponsored nofollow noopener"><span class="adimg"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/2272/9784767832272_1_3.jpg" alt="やさしく学ぶ Jw_cad 8《デラックス版》" loading="lazy"></span><span class="adname">やさしく学ぶ Jw_cad 8《デラックス版》</span><span class="adbtn">楽天市場で見る</span></a></div></div>
+      <div class="adbox"><span class="adtag">広告</span><div class="adin"><a class="adcard" href="https://af.moshimo.com/af/c/click?a_id=5914011&amp;p_id=54&amp;pc_id=54&amp;pl_id=27059&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fkitcut-ps%2F51661736741-1%2F" target="_blank" rel="sponsored nofollow noopener"><span class="adimg"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kitcut-ps/cabinet/item/153/p-269613.jpg" alt="iClever ワイヤレステンキー KP09" loading="lazy"></span><span class="adname">iClever ワイヤレステンキー KP09</span><span class="adbtn">楽天市場で見る</span></a></div></div>
+      <div class="adbox"><span class="adtag">広告</span><div class="adin"><a class="adcard" href="https://af.moshimo.com/af/c/click?a_id=5914011&amp;p_id=54&amp;pc_id=54&amp;pl_id=27059&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fsproutsllc%2Fs-b0g34jt9gq-20260803%2F" target="_blank" rel="sponsored nofollow noopener"><span class="adimg"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/sproutsllc/cabinet/n20260803133805/b0g34jt9gq-1.jpg" alt="グリーンハウス モニターアーム GH-AMDX1-BK" loading="lazy"></span><span class="adname">グリーンハウス モニターアーム GH-AMDX1-BK</span><span class="adbtn">楽天市場で見る</span></a></div></div>
     </div>
     <p class="note">本ページはプロモーション（アフィリエイト広告）を含みます。</p>
   </section>
